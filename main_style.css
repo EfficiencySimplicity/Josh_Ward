@@ -4,10 +4,10 @@
 
   display: grid;
   gap: 50px 50px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   overflow: auto;
 
-  top: 10vh;
+  top: max(80px, 10vh);
 
   width: 100%;
   min-width: 400px;
@@ -17,7 +17,7 @@
   margin-left: auto;
   margin-right: auto;
 
-  border:1px solid red;
+  /* border:1px solid red; */
 }
 
 .title_box {
@@ -55,7 +55,7 @@
 }
 
 .grid_test{
-    border:1px solid blue;
+    /* border:1px solid blue; */
     aspect-ratio: 1/1;
 }
 
@@ -66,8 +66,8 @@
     grid-column: 1 / span 3;
     grid-row: 1 / span 2;
 
-    background-color:azure;
-    border:1px solid blue;
+    background-color:slategray;
+    /* border:1px solid blue; */
 
     padding: 10px;
     text-align: left top;
@@ -78,7 +78,34 @@
 
 
 .intro_text{
-    position: relative;
     margin-top:  0px;
-    border:1px solid blue;
+    /* border:1px solid blue; */
+}
+
+.links_box
+{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
+    align-items: center;
+    gap: 10px 10px;
+
+    grid-column: 4 / span 2;
+    grid-row: 2 / span 1;
+
+    background-color:slategray;
+    /* border:1px solid blue; */
+
+    padding: 10px;
+    text-align: left top;
+    text-wrap: wrap;
+
+    overflow: hidden;
+}
+
+.logo {
+    position: relative;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0);
+    width: 90%;
 }
