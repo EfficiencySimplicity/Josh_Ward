@@ -128,3 +128,11 @@
     margin-left: 4%;
     background-color: aliceblue;
 }
+
+.background-swapper{
+    background-color:slategray;
+    
+    aspect-ratio: 1/1;
+
+    display: flex;
+}

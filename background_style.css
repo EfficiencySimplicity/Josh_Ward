@@ -1,0 +1,21 @@
+.background-light{
+    background-color:rgb(206, 224, 239);
+}
+
+.background-dark{
+    background-color:rgb(17, 54, 84);
+}
+
+.background-forest-1{
+    background-image: url('forest.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.background-forest-2{
+    background-image: url('https://images.pexels.com/photos/15976174/pexels-photo-15976174.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

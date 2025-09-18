@@ -1,83 +1,118 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>test HTML doc.....</title>
+<head id = 'head'>
+
+    <title> Main Page </title>
+
     <meta charset="UTF-8">
     <meta lang="en">
-    <link rel="stylesheet" href="style.css">
 
-    <style>
-        body {
-            background-image: url('forest.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-    </style>
+    <link rel="stylesheet" href="main_style.css">
+    <link rel="stylesheet" href="background_style.css">
 
-  </head>
+    <script src=
+        "https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js">
+    </script>
 
-<!-- <191, 62, 62>-->
-<!-- <221, 203, 21>-->
-<!-- <101, 111, 188>-->
-<!-- <93, 181, 72>-->
-<!-- <186, 187, 192>-->
-<!-- <123, 123, 128>-->
-<!-- <42, 42, 46>-->
-<!-- <227, 227, 232>-->
-<!-- full cover div... with background bottom?... -->
-<!-- <body style="background-color:rgb(3, 0, 66);"></body> -->
-<div style = "width: auto; height: 400rem; background: url(water-drops.png);
-                background-size: 100%;
-                background-repeat: repeat;">
+</head>
 
-<div class = 'main_page' style = "background: url(page_center.png);
-                background-size: 100%;
-              background-repeat: repeat-y;">
 
-    <div>
-        <img src="pallette.png" alt="pallette" class="center" style = "width: 73.5%; image-rendering: pixelated;"></img> 
-    </div>
-<!-- <div class = "center" style = "image-rendering: pixelated;"> 
-    <img src="page_center.png" alt="pallette" style = "z-index: -1; position: absolute; height : auto">
-</div> -->
+<body id = 'body' class = background-light>
 
     <div class = 'title_box'>
+        <p class = 'title_text'>{ Josh_Ward }</p>
+    </div>
 
-        <div class = "logo_box">
-            <a href = "https://github.com/EfficiencySimplicity">
-                <img src="github-mark/github-mark.png" alt="Github" class="logo0"> 
+
+    <div class = 'page_content'>
+
+        <div class = 'intro_box'>
+            <h2 class = 'intro_text'>
+                Hi There! :) <span style = 'font-size: 80%'> this is my website! </span>
+            </h2>
+            <p class = 'intro_text'>
+                Here are some of the tools I used to make it:
+                <br>
+                <a href = 'https://www.w3schools.com/html/'> - W3schools</a>
+                <br>
+                <a href = 'https://learnlayout.com/'> - LearnLayout</a>
+                <br>
+                <a href = 'https://docs.github.com/en/pages'> - Github Pages</a>
+                <br>
+                <a href = 'https://code.visualstudio.com/'> - VSCode</a>
+                <br>
+                <a href = 'https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server'> - Invaluable VSCode extension</a>
+            </p>
+
+        </div>
+
+        <div id = 'backgroundSwapBox' class = 'background-swapper'>
+            <img style = 'margin: auto auto auto auto; width: 80%; height: 80%;' src = 'https://cdn.pixabay.com/photo/2013/07/13/12/20/recycle-159650_960_720.png' alt="swap background">
+            <script src = 'swapBackground.js'></script>
+        </div>
+
+
+        <div class = 'grid_test'></div>
+
+        <div class = 'links_box'>
+            <a href = "https://github.com/EfficiencySimplicity"
+               title = 'Github'>
+                <img src="logos/github.png" alt="Github" class="logo"> 
             </a>
 
-            <a href = "https://insanityonamachine.itch.io/">
-                <img src="press-kit-2019.01.02/logos/itchio-logo-textless-black.png" alt="Itch" class="logo0"> 
+            <a href = "https://insanityonamachine.itch.io/"
+               title = 'itch.io'>
+                <img src="logos/itchio.png" alt="itch.io" class="logo"> 
             </a>
 
-            <a href = "mailto:joshua.ward@fastmail.com">
-                <img src="mail.png" alt="Email" class="logo0"> 
+            <a href = "mailto:joshua.ward@fastmail.com"
+               title = 'joshua.ward@fastmail.com'>
+                <img src="logos/mail.png" alt="email" class="logo"> 
             </a>
         </div>
 
+        <div class = 'canvas_box' id = 'canvasBox'>
+
+            <script src = 'eye.js'></script> 
+
+        </div>
+ 
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+        <div class = 'grid_test'></div>
+
+
     </div>
 
-
-    <div class = "page_content">
-
-        <div class="grid_container">
-
-            <!-- needs to be in a div, all absolute. -->
-            <div class = "post_holder">
-                <a href = "link_page.html"><img src = "post.png" class = "post_icon"> </a>
-                <img src = "post_images/links.jpg" class = "post_image">
-                <p class = "post_text"> Coolerest Links </p>
-            </div>
-
-        </div> 
-    </div>
-
-
-</div>
-</div>
 </body>
+
 </html>

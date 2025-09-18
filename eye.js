@@ -2,6 +2,11 @@
 let x = 0;
 let y = 0;
 
+let pupilX = 50;
+let pupilY = 50;
+
+let squint = 0;
+
 function setup(){
     let canvas = createCanvas(100, 100);
     canvas.id('myCanvas');
@@ -10,14 +15,29 @@ function setup(){
 }
 
 function draw() {
-    background('aliceblue');
+    background('black');
 
-    x += (mouseX - x) * 0.1;
-    y += (mouseY - y) * 0.1;
-    fill(255);
-    ellipse(x, y, 100, 50);
+    x = 50 + (mouseX - 50) * 0.1;
+    y = 50 + (mouseY - 50) * 0.1;
+
+    pupilX = 50 + (mouseX - 50) * 0.3;
+    pupilY = 50 + (mouseY - 50) * 0.3;
+
+    squint = (mouseX - 50) * (mouseX - 50) + (mouseY - 50) * (mouseY - 50);
+    squint = 10 / Math.max(Math.sqrt(squint) / 10, 1);
+
+    strokeWeight(1);
+
+    fill('aliceblue');
+    ellipse(x, y, 100, 100);
+
     fill(0, 0, 200);
-    ellipse(x, y, 50, 50);
+    ellipse(pupilX, pupilY, 50, 50);
     fill(0);
-    ellipse(x, y, 20, 20);
+    ellipse(pupilX, pupilY, 20, 20);
+
+    noFill();
+    strokeWeight(100);
+    ellipse(x, y-(170 + squint), 300, 500);
+    ellipse(x, y+(170 + squint), 300, 500);
 }
