@@ -79,6 +79,7 @@
 
 .intro_text{
     margin-top:  0px;
+    font-size: min(3cqw, 4cqh);
     /* border:1px solid blue; */
 }
 

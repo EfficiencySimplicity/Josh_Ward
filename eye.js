@@ -1,23 +1,3 @@
-// var c = document.getElementById("myCanvas");
-// var ctx = c.getContext("2d");
-
-// const mouseX = 0;
-// const mouseY = 0;
-
-// document.addEventListener('mousemove', function(event) {
-//     mouseX = event.clientX;
-//     mouseY = event.clientY;
-//     ctx.beginPath();
-//     ctx.ellipse(mouseX, mouseY, 40, 20, 0, 0, 2 * Math.PI);
-//     ctx.stroke();
-// });
-
-// ctx.beginPath();
-// ctx.ellipse(50, 50, 40, 20, 0, 0, 2 * Math.PI);
-// ctx.ellipse(mouseX, mouseY, 40, 20, 0, 0, 2 * Math.PI);
-// ctx.stroke();
-
-// console.log('aaaa');
 
 let x = 0;
 let y = 0;
