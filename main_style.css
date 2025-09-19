@@ -48,6 +48,7 @@
     position: relative;
 
     text-align: left;
+    text-wrap: nowrap;
     font-size: 300%;
 
     /*border:1px solid blue;*/
@@ -135,4 +136,16 @@
     aspect-ratio: 1/1;
 
     display: flex;
+}
+
+#expand-hover:hover{
+    transform:scale(1.1) rotate(5deg);
+}
+
+.quote_box{
+    border:1px solid blue;
+    background-color:slategray;
+
+    grid-column: 3 / span 3;
+    grid-row: 3 / span 1;
 }

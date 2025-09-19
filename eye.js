@@ -1,6 +1,9 @@
 
-let x = 0;
-let y = 0;
+let goalX = 0;
+let goalY = 0;
+
+let eyeX = 0;
+let eyeY = 0;
 
 let pupilX = 50;
 let pupilY = 50;
@@ -17,19 +20,22 @@ function setup(){
 function draw() {
     background('black');
 
-    x = 50 + (mouseX - 50) * 0.1;
-    y = 50 + (mouseY - 50) * 0.1;
+    goalX += (mouseX - goalX) * .1;
+    goalY += (mouseY - goalY) * .1;
+
+    eyeX = 50 + (goalX - 50) * 0.1;
+    eyeY = 50 + (goalY - 50) * 0.1;
 
     pupilX = 50 + (mouseX - 50) * 0.3;
     pupilY = 50 + (mouseY - 50) * 0.3;
 
-    squint = (mouseX - 50) * (mouseX - 50) + (mouseY - 50) * (mouseY - 50);
+    squint = (mouseX - eyeX) * (mouseX - eyeX) + (mouseY - eyeY) * (mouseY - eyeY);
     squint = 10 / Math.max(Math.sqrt(squint) / 10, 1);
 
     strokeWeight(1);
 
     fill('aliceblue');
-    ellipse(x, y, 100, 100);
+    ellipse(eyeX, eyeY, 100, 100);
 
     fill(0, 0, 200);
     ellipse(pupilX, pupilY, 50, 50);
@@ -38,6 +44,6 @@ function draw() {
 
     noFill();
     strokeWeight(100);
-    ellipse(x, y-(170 + squint), 300, 500);
-    ellipse(x, y+(170 + squint), 300, 500);
+    ellipse(eyeX, eyeY-(170 + squint), 300, 500);
+    ellipse(eyeX, eyeY+(170 + squint), 300, 500);
 }
