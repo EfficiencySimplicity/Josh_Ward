@@ -146,6 +146,8 @@
     border:1px solid blue;
     background-color:slategray;
 
+    padding:10px;
+
     grid-column: 3 / span 3;
     grid-row: 3 / span 1;
 }
