@@ -8,12 +8,14 @@
     <meta charset="UTF-8">
     <meta lang="en">
 
-    <link rel="stylesheet" href="main_style.css">
-    <link rel="stylesheet" href="background_style.css">
+    <link rel="stylesheet" href="css/main_style.css">
+    <link rel="stylesheet" href="css/background_style.css">
 
     <script src=
         "https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js">
     </script>
+
+    <script src = 'eyes.js'></script> 
 
 </head>
 
@@ -21,7 +23,8 @@
 <body id = 'body' class = background-light>
 
     <div class = 'title_box'>
-        <p class = 'title_text' title = 'coding coding coding...'>{ Josh_Ward } <span style = 'font-size: 50%'> coding coding coding coding coding coding coding coding coding coding coding coding coding coding coding coding coding coding coding coding :)</span></p>
+        <p class = 'title_text' title = 'coding coding coding...'>{ Josh_Ward } <span id = 'splash_text' style = 'font-size: 50%'> coding </span></p>
+        <script src = 'splash_text.js'></script> 
     </div>
 
 
@@ -72,11 +75,15 @@
             </a>
         </div>
 
+        
         <div class = 'canvas_box' id = 'canvasBox'>
 
-            <script src = 'eye.js'></script> 
-
         </div>
+
+        <div class = 'canvas_box_right' id = 'canvasBoxRight'>
+            
+        </div>
+
  
         <div class = 'quote_box'>
 
@@ -88,7 +95,7 @@
         <div class = 'map_box'>
             <iframe class = 'map_frame' src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31623.34689133741!2d-85.65324064999999!3d38.33200639999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1759593476408!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class = 'grid_test'></div>
+
         <div class = 'grid_test'></div>
         <div class = 'grid_test'></div>
         <div class = 'grid_test'></div>
