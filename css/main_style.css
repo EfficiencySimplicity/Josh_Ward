@@ -1,3 +1,8 @@
+body{
+    padding: 0 0;
+    margin: 1% 5%;
+}
+
 .page_content {
 
   position: relative;
@@ -5,7 +10,7 @@
   display: grid;
   gap: 50px 50px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  overflow: auto;
+  overflow: visible;
 
   top: max(80px, 10vh);
 
@@ -17,7 +22,7 @@
   margin-left: auto;
   margin-right: auto;
 
-  /* border:1px solid red; */
+  /* outline:1px solid red; */
 }
 
 .title_box {
@@ -37,8 +42,8 @@
   width: 100%;
   min-width: 400px;
 
-  /* border:1px solid red; */
-  background-color:slategray;
+  /* outline:1px solid red; */
+  background-color:rgb(67, 139, 210);
 
   z-index: 100;
 }
@@ -51,12 +56,13 @@
     text-wrap: nowrap;
     font-size: 300%;
 
-    /*border:1px solid blue;*/
+    /*outline:1px solid blue;*/
     margin: auto 10px;
 }
 
 .grid_test{
-    border:1px solid blue;
+    outline:1px solid blue;
+    border-radius: 20px;
     aspect-ratio: 1/1;
 }
 
@@ -67,8 +73,9 @@
     grid-column: 1 / span 3;
     grid-row: 1 / span 2;
 
-    background-color:slategray;
-    /* border:1px solid blue; */
+    background-color:rgb(54, 126, 227);
+    /* outline:1px solid blue; */
+    border-radius: 20px;
 
     padding: 10px;
     text-align: left top;
@@ -81,7 +88,7 @@
 .intro_text{
     margin-top:  0px;
     font-size: min(3cqw, 4cqh);
-    /* border:1px solid blue; */
+    /* outline:1px solid blue; */
 }
 
 .links_box
@@ -95,8 +102,9 @@
     grid-column: 4 / span 2;
     grid-row: 2 / span 1;
 
-    background-color:slategray;
-    /* border:1px solid blue; */
+    background-color:rgb(45, 101, 156);
+    /* outline:1px solid blue; */
+    border-radius: 20px;
 
     padding: 10px;
     text-align: left top;
@@ -114,8 +122,9 @@
 
 
 .canvas_box{
-    border:1px solid blue;
-    background-color:slategray;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color:black;
     aspect-ratio: 1/1;
 
     grid-column: 1 / span 2;
@@ -123,8 +132,9 @@
 }
 
 .canvas_box_right{
-    border:1px solid blue;
-    background-color:slategray;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color:black;
     aspect-ratio: 1/1;
 
     grid-column: 3 / span 1;
@@ -140,7 +150,8 @@
 } */
 
 .background-swapper{
-    background-color:slategray;
+    border-radius:20px;
+    background-color:rgb(45, 101, 156);
     
     aspect-ratio: 1/1;
 
@@ -152,8 +163,8 @@
 }
 
 .quote_box{
-    border:1px solid blue;
-    background-color:slategray;
+    border-radius:20px;
+    background-color:rgb(54, 126, 227);
 
     padding:10px;
 
@@ -162,8 +173,9 @@
 }
 
 .map_box{
-    border:1px solid blue;
     background-color:slategray;
+    border-radius:20px;
+    overflow: hidden;
     aspect-ratio: 1/1;
 
     grid-column: 1 / span 5;
