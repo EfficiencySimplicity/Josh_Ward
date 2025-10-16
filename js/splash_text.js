@@ -23,8 +23,28 @@ const texts = [
     'Unicorns and canola oil!',
     'Je ne sais pas!',
     'Made in MMXXV!',
-    '"This is not a website"'
+    '"This is not a website"',
+    'Gluten-Free!',
+    'Arsenic-Free!',
+    'Non-GMO!',
+    'The Tortoise and Achilles visit Coney Island...',
+    'The all-electric kitchen-in-the-sky!',
+    'And Raspberry Cake, too!',
+    '{ur}y bra{kets!',
+    'Snakes in the grass!',
+    '>>+<[-->]+[[->]<+]',
+    'correct horse battery staple!',
+    'Joint Photographic Experts Group!',
+    '.crvdb!',
+    'buffalo buffalo buffalo buffalo buffalo buffalo buffalo buffalo',
+    'Yields falsehood when preceded by its quotation!',
+    'Wait just one onosecond!',
+    'taco cat!',
+    'JFMAMJJASOND! ~but who is J. Jason D.?',
+    'pico de gallo-8!',
+    'Better than better beef stew!',
 ];
+// 44 splash texts
 
 var text = texts[Math.floor(Math.random()*texts.length)];
 var text_box = document.getElementById('splash_text');

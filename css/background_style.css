@@ -7,15 +7,33 @@
 }
 
 .background-forest-1{
-    background-image: url('/backgrounds/forest.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-image: url('https://images.pexels.com/photos/142497/pexels-photo-142497.jpeg');
 }
 
 .background-forest-2{
     background-image: url('https://images.pexels.com/photos/15976174/pexels-photo-15976174.jpeg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+}
+
+.background-forest-3{
+    background-image: url('https://images.pexels.com/photos/775201/pexels-photo-775201.jpeg');
+}
+
+.background-forest-4{
+    background-image: url('https://images.pexels.com/photos/1671325/pexels-photo-1671325.jpeg');
+}
+
+.background-fog-1{
+    background-image: url('https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg');
+}
+
+.background-fog-2{
+    background-image: url('https://images.pexels.com/photos/69825/sunbeam-fog-autumn-nature-69825.jpeg');
+}
+
+.background-fractal-1{
+    background-image: url('https://images.pexels.com/photos/5278835/pexels-photo-5278835.jpeg');
+}
+
+.background-fractal-2{
+    background-image: url('https://images.pexels.com/photos/11280353/pexels-photo-11280353.jpeg');
 }

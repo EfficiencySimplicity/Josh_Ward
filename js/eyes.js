@@ -1,110 +1,62 @@
 // https://editor.p5js.org/rjgilmour/sketches/58lTkGXyN
 
-var left_eye = function(p) { // p could be any variable name
+class EyeProgram{
+    constructor(p, canvasID, parentID, color = 'blue'){
+
+        let scale = 200;
+        let halfScale = scale / 2;
     
-    let goalX = 0;
-    let goalY = 0;
+        let goalX = 0;
+        let goalY = 0;
 
-    let eyeX = 0;
-    let eyeY = 0;
+        let eyeX = 0;
+        let eyeY = 0;
 
-    let pupilX = 50;
-    let pupilY = 50;
+        let pupilX = halfScale;
+        let pupilY = halfScale;
 
-    let squint = 0;
+        let squint = 0;
 
-    p.setup = function (){
-        let canvas = p.createCanvas(100, 100);
-        canvas.id('myCanvas');
-        canvas.parent('canvasBox');
-        canvas.canvas.style = 'width: 90%; height: 90%; margin-top: 4%; margin-left: 4%; border:1px solid #000000;';
-    };
+        p.setup = function (){
+            let canvas = p.createCanvas(scale, scale);
+            canvas.id(canvasID);
+            canvas.parent(parentID);
+            canvas.canvas.style = 'width: 100%; height:100%;';
+        };
 
-    p.draw = function() {
-        p.background('black');
+        p.draw = function() {
+            p.background('black');
 
-        goalX += (p.mouseX - goalX) * .1;
-        goalY += (p.mouseY - goalY) * .1;
+            goalX += (p.mouseX - goalX) * 0.1;
+            goalY += (p.mouseY - goalY) * 0.1;
 
-        eyeX = 50 + (goalX - 50) * 0.1;
-        eyeY = 50 + (goalY - 50) * 0.1;
+            eyeX = halfScale + (goalX - halfScale) * 0.1;
+            eyeY = halfScale + (goalY - halfScale) * 0.1;
 
-        pupilX = 50 + (p.mouseX - 50) * 0.3;
-        pupilY = 50 + (p.mouseY - 50) * 0.3;
+            pupilX = halfScale + (p.mouseX - halfScale) * 0.3;
+            pupilY = halfScale + (p.mouseY - halfScale) * 0.3;
 
-        squint = (p.mouseX - eyeX) * (p.mouseX - eyeX) + (p.mouseY - eyeY) * (p.mouseY - eyeY);
-        squint = 10 / Math.max(Math.sqrt(squint) / 10, 1);
+            // euclidean distance
+            squint = Math.sqrt((p.mouseX - eyeX) ** 2 + (p.mouseY - eyeY) ** 2);
+            squint = (scale / 10) / Math.max(squint / (scale / 10), 1);
 
-        p.strokeWeight(1);
+            p.strokeWeight(1);
 
-        p.fill('aliceblue');
-        p.ellipse(eyeX, eyeY, 100, 100);
+            p.fill('aliceblue');
+            p.ellipse(eyeX, eyeY, scale, scale);
 
-        p.fill(0, 0, 200);
-        p.ellipse(pupilX, pupilY, 50, 50);
-        p.fill(0);
-        p.ellipse(pupilX, pupilY, 20, 20);
+            p.fill(color);
+            p.ellipse(pupilX, pupilY, halfScale, halfScale);
+            p.fill(0);
+            p.ellipse(pupilX, pupilY, halfScale *2/5, halfScale *2/5);
 
-        p.noFill();
-        p.strokeWeight(100);
-        p.ellipse(eyeX, eyeY-(170 + squint), 300, 500);
-        p.ellipse(eyeX, eyeY+(170 + squint), 300, 500);
+            p.noFill();
+            p.strokeWeight(scale);
+            p.ellipse(eyeX, eyeY-(scale*1.7 + squint), 3*scale, 5*scale);
+            p.ellipse(eyeX, eyeY+(scale*1.7 + squint), 3*scale, 5*scale);
+        };
     };
 };
 
-new p5(left_eye);
-
-
-var right_eye = function(p) { // p could be any variable name
-    
-    let goalX = 0;
-    let goalY = 0;
-
-    let eyeX = 0;
-    let eyeY = 0;
-
-    let pupilX = 50;
-    let pupilY = 50;
-
-    let squint = 0;
-
-    p.setup = function (){
-        let canvas = p.createCanvas(100, 100);
-        canvas.id('myCanvas');
-        canvas.parent('canvasBoxRight');
-        canvas.canvas.style = 'width: 90%; height: 90%; margin-top: 4%; margin-left: 4%; border:1px solid #000000;';
-    };
-
-    p.draw = function() {
-        p.background('black');
-
-        goalX += (p.mouseX - goalX) * .05;
-        goalY += (p.mouseY - goalY) * .05;
-
-        eyeX = 50 + (goalX - 50) * 0.05;
-        eyeY = 50 + (goalY - 50) * 0.05;
-
-        pupilX = 50 + (p.mouseX - 50) * 0.15;
-        pupilY = 50 + (p.mouseY - 50) * 0.15;
-
-        squint = (p.mouseX - eyeX) * (p.mouseX - eyeX) + (p.mouseY - eyeY) * (p.mouseY - eyeY);
-        squint = 10 / Math.max(Math.sqrt(squint) / 10, 1);
-
-        p.strokeWeight(1);
-
-        p.fill('aliceblue');
-        p.ellipse(eyeX, eyeY, 100, 100);
-
-        p.fill(255, 127, 80);
-        p.ellipse(pupilX, pupilY, 50, 50);
-        p.fill(0);
-        p.ellipse(pupilX, pupilY, 20, 20);
-
-        p.noFill();
-        p.strokeWeight(100);
-        p.ellipse(eyeX, eyeY-(170 + squint), 300, 500);
-        p.ellipse(eyeX, eyeY+(170 + squint), 300, 500);
-    };
-};
-
-new p5(right_eye);
+new p5(p => new EyeProgram(p, 'bigEye', 'eyeBox'));
+new p5(p => new EyeProgram(p, 'smallEye', 'eyeBoxRight', 'orange'));
