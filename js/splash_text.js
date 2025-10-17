@@ -27,7 +27,7 @@ const texts = [
     'Gluten-Free!',
     'Arsenic-Free!',
     'Non-GMO!',
-    'The Tortoise and Achilles visit Coney Island...',
+    'The Tortoise and Achilles visit Coney Island!',
     'The all-electric kitchen-in-the-sky!',
     'And Raspberry Cake, too!',
     '{ur}y bra{kets!',
@@ -43,8 +43,14 @@ const texts = [
     'JFMAMJJASOND! ~but who is J. Jason D.?',
     'pico de gallo-8!',
     'Better than better beef stew!',
+    'mu.',
+    're h du o ct l io i ni s sm m',
+    'Error 418: I\'m a teapot',
+    'Genericide?!',
+    'Non-sequential Markov Chain text generator!',
+    'Kubernetes!'
 ];
-// 44 splash texts
+// 50 splash texts
 
 var text = texts[Math.floor(Math.random()*texts.length)];
 var text_box = document.getElementById('splash_text');

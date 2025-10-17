@@ -29,7 +29,7 @@ var program = function(p){
         p.ellipse(p.mouseX, 100, moonRadius*2, moonRadius*2);
 
 
-        p.stroke(0, 0, Math.abs(p.mouseX - 100));
+        p.stroke(0, 0, Math.abs(p.mouseX - 100)*2);
         p.noFill();
         p.strokeWeight(100);
         p.ellipse(100, 100, moonRadius + 150, moonRadius + 150);
